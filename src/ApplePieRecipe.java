@@ -1,29 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class ApplePieRecipe {
-    Ingredient roomboter = new Ingredient(200, "gram", "ongezouten roomboter");
-    Ingredient witteBastardSuiker = new Ingredient(200, "gram", "witte bastard suiker");
-    Ingredient zelfrijzendBakmeel = new Ingredient(400, "gram", "zelfrijzend bakmeel");
-    Ingredient ei = new Ingredient(1, "stuk(s)", "ei");
-    Ingredient vanillesuiker = new Ingredient(8, "gram", "vanillesuiker");
-    Ingredient zout = new Ingredient(1, "snuf", "zout");
-    Ingredient zoetzureAppels = new Ingredient(1.5, "kilo", "zoetzure appels");
-    Ingredient kristalSuiker = new Ingredient(75, "gram", "kristal suiker");
-    Ingredient kaneel = new Ingredient(3, "theelepels", "kaneel");
-    Ingredient paneermeel = new Ingredient(15, "gram", "paneermeel");
+    private List<Ingredient> ingredients;
 
     public ApplePieRecipe() {
+        ingredients = new ArrayList<>();
+        ingredients.add(new Ingredient(200, "gram", "ongezouten roomboter"));
+        ingredients.add(new Ingredient(200, "gram", "witte bastard suiker"));
+        ingredients.add(new Ingredient(400, "gram", "zelfrijzend bakmeel"));
+        ingredients.add(new Ingredient(1, "stuk(s)", "ei"));
+        ingredients.add(new Ingredient(8, "gram", "vanillesuiker"));
+        ingredients.add(new Ingredient(1, "snuf", "zout"));
+        ingredients.add(new Ingredient(1.5, "kilo", "zoetzure appels"));
+        ingredients.add(new Ingredient(75, "gram", "kristal suiker"));
+        ingredients.add(new Ingredient(3, "theelepels", "kaneel"));
+        ingredients.add(new Ingredient(15, "gram", "paneermeel"));
     }
 
     public void printIngredients() {
-        System.out.println(roomboter.getAmount() + " " + roomboter.getUnit() + " " + roomboter.getName());
-        System.out.println(witteBastardSuiker.getAmount() + " " + witteBastardSuiker.getUnit() + " " + witteBastardSuiker.getName());
-        System.out.println(zelfrijzendBakmeel.getAmount() + " " + zelfrijzendBakmeel.getUnit() + " " + zelfrijzendBakmeel.getName());
-        System.out.println(ei.getAmount() + " " + ei.getUnit() + " " + ei.getName());
-        System.out.println(vanillesuiker.getAmount() + " " + vanillesuiker.getUnit() + " " + vanillesuiker.getName());
-        System.out.println(zout.getAmount() + " " + zout.getUnit() + " " + zout.getName());
-        System.out.println(zoetzureAppels.getAmount() + " " + zoetzureAppels.getUnit() + " " + zoetzureAppels.getName());
-        System.out.println(kristalSuiker.getAmount() + " " + kristalSuiker.getUnit() + " " + kristalSuiker.getName());
-        System.out.println(kaneel.getAmount() + " " + kaneel.getUnit() + " " + kaneel.getName());
-        System.out.println(paneermeel.getAmount() + " " + paneermeel.getUnit() + " " + paneermeel.getName() + "\n");
+        for (Ingredient ingredient : ingredients) {
+            System.out.println(ingredient.getAmount() + " " + ingredient.getUnit() + " " + ingredient.getName());
+        }
+        System.out.println();
     }
 
     public void printRecipe() {
