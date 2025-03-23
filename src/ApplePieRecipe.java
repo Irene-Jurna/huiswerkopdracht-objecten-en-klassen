@@ -10,6 +10,22 @@ public class ApplePieRecipe {
     Ingredient kaneel = new Ingredient(3, "theelepels", "kaneel");
     Ingredient paneermeel = new Ingredient(15, "gram", "paneermeel");
 
+    public ApplePieRecipe() {
+    }
+
+    public void printIngredients() {
+        System.out.println(roomboter.getAmount() + " " + roomboter.getUnit() + " " + roomboter.getName());
+        System.out.println(witteBastardSuiker.getAmount() + " " + witteBastardSuiker.getUnit() + " " + witteBastardSuiker.getName());
+        System.out.println(zelfrijzendBakmeel.getAmount() + " " + zelfrijzendBakmeel.getUnit() + " " + zelfrijzendBakmeel.getName());
+        System.out.println(ei.getAmount() + " " + ei.getUnit() + " " + ei.getName());
+        System.out.println(vanillesuiker.getAmount() + " " + vanillesuiker.getUnit() + " " + vanillesuiker.getName());
+        System.out.println(zout.getAmount() + " " + zout.getUnit() + " " + zout.getName());
+        System.out.println(zoetzureAppels.getAmount() + " " + zoetzureAppels.getUnit() + " " + zoetzureAppels.getName());
+        System.out.println(kristalSuiker.getAmount() + " " + kristalSuiker.getUnit() + " " + kristalSuiker.getName());
+        System.out.println(kaneel.getAmount() + " " + kaneel.getUnit() + " " + kaneel.getName());
+        System.out.println(paneermeel.getAmount() + " " + paneermeel.getUnit() + " " + paneermeel.getName());
+    }
+
     public void preheatOven() {
         System.out.println("Verwarm de oven van te voren op 170 graden Celsius (boven en onderwarmte)");
     }
@@ -49,5 +65,4 @@ public class ApplePieRecipe {
     public void bakeCake() {
         System.out.println("Zet de taart iets onder het midden van de oven. Bak de taart in 60 minuten op 170 graden Celsius (boven en onderwarmte) gaar en goudbruin.");
     }
-
 }
