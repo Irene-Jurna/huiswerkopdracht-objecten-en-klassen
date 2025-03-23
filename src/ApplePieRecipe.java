@@ -23,7 +23,20 @@ public class ApplePieRecipe {
         System.out.println(zoetzureAppels.getAmount() + " " + zoetzureAppels.getUnit() + " " + zoetzureAppels.getName());
         System.out.println(kristalSuiker.getAmount() + " " + kristalSuiker.getUnit() + " " + kristalSuiker.getName());
         System.out.println(kaneel.getAmount() + " " + kaneel.getUnit() + " " + kaneel.getName());
-        System.out.println(paneermeel.getAmount() + " " + paneermeel.getUnit() + " " + paneermeel.getName());
+        System.out.println(paneermeel.getAmount() + " " + paneermeel.getUnit() + " " + paneermeel.getName() + "\n");
+    }
+
+    public void printRecipe() {
+        preheatOven();
+        beatEgg();
+        makeDough();
+        prepareApples();
+        prepareSpringform();
+        fillSpringformWithDough();
+        fillSpringformWithApples();
+        cutDoughStrips();
+        makeCakeTop();
+        bakeCake();
     }
 
     public void preheatOven() {
